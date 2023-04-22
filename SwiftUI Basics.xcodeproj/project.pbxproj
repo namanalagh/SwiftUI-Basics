@@ -14,6 +14,7 @@
 		C9771A1229F2669000B68223 /* SwiftUI_BasicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9771A1129F2669000B68223 /* SwiftUI_BasicsTests.swift */; };
 		C9771A1C29F2669000B68223 /* SwiftUI_BasicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9771A1B29F2669000B68223 /* SwiftUI_BasicsUITests.swift */; };
 		C9771A1E29F2669000B68223 /* SwiftUI_BasicsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9771A1D29F2669000B68223 /* SwiftUI_BasicsUITestsLaunchTests.swift */; };
+		C9771A2B29F4258100B68223 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9771A2A29F4258100B68223 /* LoginPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C9771A1729F2669000B68223 /* SwiftUI BasicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI BasicsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9771A1B29F2669000B68223 /* SwiftUI_BasicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BasicsUITests.swift; sourceTree = "<group>"; };
 		C9771A1D29F2669000B68223 /* SwiftUI_BasicsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BasicsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C9771A2A29F4258100B68223 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				C9771A0029F2668F00B68223 /* SwiftUI_BasicsApp.swift */,
 				C9771A0229F2668F00B68223 /* ContentView.swift */,
+				C9771A2A29F4258100B68223 /* LoginPage.swift */,
 				C9771A0429F2669000B68223 /* Assets.xcassets */,
 				C9771A0629F2669000B68223 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9771A0329F2668F00B68223 /* ContentView.swift in Sources */,
+				C9771A2B29F4258100B68223 /* LoginPage.swift in Sources */,
 				C9771A0129F2668F00B68223 /* SwiftUI_BasicsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

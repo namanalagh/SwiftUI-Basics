@@ -15,6 +15,7 @@
 		C9771A1C29F2669000B68223 /* SwiftUI_BasicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9771A1B29F2669000B68223 /* SwiftUI_BasicsUITests.swift */; };
 		C9771A1E29F2669000B68223 /* SwiftUI_BasicsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9771A1D29F2669000B68223 /* SwiftUI_BasicsUITestsLaunchTests.swift */; };
 		C9771A2B29F4258100B68223 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9771A2A29F4258100B68223 /* LoginPage.swift */; };
+		C9771A2D29F45BC400B68223 /* DoctorHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9771A2C29F45BC400B68223 /* DoctorHomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C9771A1B29F2669000B68223 /* SwiftUI_BasicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BasicsUITests.swift; sourceTree = "<group>"; };
 		C9771A1D29F2669000B68223 /* SwiftUI_BasicsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BasicsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C9771A2A29F4258100B68223 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		C9771A2C29F45BC400B68223 /* DoctorHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		C97719F429F2668F00B68223 = {
 			isa = PBXGroup;
 			children = (
+				C9771A2C29F45BC400B68223 /* DoctorHomePage.swift */,
 				C97719FF29F2668F00B68223 /* SwiftUI Basics */,
 				C9771A1029F2669000B68223 /* SwiftUI BasicsTests */,
 				C9771A1A29F2669000B68223 /* SwiftUI BasicsUITests */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9771A2D29F45BC400B68223 /* DoctorHomePage.swift in Sources */,
 				C9771A0329F2668F00B68223 /* ContentView.swift in Sources */,
 				C9771A2B29F4258100B68223 /* LoginPage.swift in Sources */,
 				C9771A0129F2668F00B68223 /* SwiftUI_BasicsApp.swift in Sources */,

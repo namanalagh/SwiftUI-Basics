@@ -21,11 +21,8 @@ struct DoctorHomePage: View {
                 .font(.title2)
                 .foregroundColor(.black)
             
-            Rectangle()
-                
-                .padding(.leading,20)
-                .foregroundColor(Color.blue.opacity(0.2))
-                .frame(width: 360, height: 1)
+            BlueLine()
+            
             
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 0){
@@ -33,22 +30,17 @@ struct DoctorHomePage: View {
                         UpcomingCard()
                             .padding(.leading,10)
                     }
+                    .padding(.top, -25)
                     .frame(height: 275)
                 }
             }
-            
-            
-            .padding(.bottom, 10)
             
             Text("Later this day")
                 .padding(.leading)
                 .font(.title2)
                 .foregroundColor(.black)
             
-            Rectangle()
-                .padding(.leading)
-                .foregroundColor(Color.blue.opacity(0.2))
-                .frame(width: 360, height: 1)
+            BlueLine()
 
             ScrollView(showsIndicators: false){
                 VStack(alignment: .center){
@@ -60,6 +52,20 @@ struct DoctorHomePage: View {
             }
             
             
+        }
+    }
+}
+
+struct BlueLine: View {
+    var body: some View{
+        HStack{
+            Spacer()
+            
+            Rectangle()
+                .foregroundColor(Color.blue.opacity(0.2))
+                .frame(width: 360, height: 1)
+            
+            Spacer()
         }
     }
 }
@@ -133,6 +139,8 @@ struct LaterThisDayCard: View {
                     Image(systemName: "circle.fill")
                         .font(.title)
                     
+                    Spacer()
+                    
                     VStack(alignment: .leading){
                         Text("Mrs. Jenna Tools")
                             .font(.title3)
@@ -150,6 +158,9 @@ struct LaterThisDayCard: View {
                                 .foregroundColor(.secondary)
                         }
                     }
+                    
+                    Spacer()
+                    
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 80, height: 40)
@@ -163,7 +174,7 @@ struct LaterThisDayCard: View {
                         }
                     }
                 }
-                
+                .frame(width: 300)
             }
             Spacer()
         }
@@ -177,10 +188,9 @@ struct UserDetails: View {
                 .font(.title)
             
             
-            VStack(){
+            VStack(alignment: .leading){
                 Text("Welcome,")
                     .font(.caption)
-                    .frame(width: 170, alignment: .leading)
                 
                 Text("Dr. Barry Balls")
                     .font(.title)

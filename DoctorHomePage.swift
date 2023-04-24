@@ -9,50 +9,33 @@ import SwiftUI
 
 struct DoctorHomePage: View {
     var body: some View {
-        
-        VStack(alignment: .leading){
-            
-            UserDetails()
-                .padding(.leading,10)
-                .padding(.bottom, 10)
-            
-            Text("Upcoming")
-                .padding(.leading,10)
-                .font(.title2)
-                .foregroundColor(.black)
-            
-            BlueLine()
-            
-            
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack(spacing: 0){
-                    ForEach(0..<5) {index in
-                        UpcomingCard()
-                            .padding(.leading,10)
-                    }
-                    .padding(.top, -25)
-                    .frame(height: 275)
+        TabView{
+            PageContent()
+                .tabItem {
+                    Label("Home", systemImage: "house")
                 }
-            }
-            
-            Text("Later this day")
-                .padding(.leading)
-                .font(.title2)
-                .foregroundColor(.black)
-            
-            BlueLine()
-
-            ScrollView(showsIndicators: false){
-                VStack(alignment: .center){
-                    ForEach(0..<5){index in
-                        LaterThisDayCard()
-                    }
+            ContentView()
+                .tabItem{
+                    Label("Schedule", systemImage: "calendar.day.timeline.leading")
+                        .foregroundColor(.black)
                 }
-            
-            }
-            
-            
+            LoginPage()
+                .tabItem{
+                    Label("Profile", systemImage: "person.circle")
+                }
+                .onAppear {
+                                // correct the transparency bug for Tab bars
+                                let tabBarAppearance = UITabBarAppearance()
+                                tabBarAppearance.configureWithOpaqueBackground()
+                                UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+                                // correct the transparency bug for Navigation bars
+                                let navigationBarAppearance = UINavigationBarAppearance()
+                                navigationBarAppearance.configureWithOpaqueBackground()
+                                UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+                            }
         }
+        
+        
     }
 }
 
@@ -70,6 +53,61 @@ struct BlueLine: View {
     }
 }
 
+
+struct PageContent: View {
+    var body: some View{
+        
+        VStack(alignment: .leading){
+            
+            UserDetails()
+                .padding(.leading,10)
+                .padding(.bottom, 10)
+            
+            ScrollView(showsIndicators: false){
+                HStack{
+                    Text("Upcoming")
+                        .padding(.leading,10)
+                        .font(.title2)
+                        .foregroundColor(.black)
+                    Spacer()
+                }
+                
+                
+                BlueLine()
+                
+                
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack(spacing: 0){
+                        ForEach(0..<5) {index in
+                            UpcomingCard()
+                                .padding(.leading,10)
+                        }
+                        .padding(.top, -25)
+                        .frame(height: 275)
+                    }
+                    .padding(.trailing, 10)
+                }
+                
+                HStack{
+                    Text("Later this day")
+                        .padding(.leading)
+                        .font(.title2)
+                        .foregroundColor(.black)
+                    Spacer()
+                }
+                
+                
+                BlueLine()
+
+                VStack(alignment: .center){
+                    ForEach(0..<5){index in
+                        LaterThisDayCard()
+                    }
+                }
+            }
+        }
+    }
+}
 struct UpcomingCard: View {
     var body: some View{
         ZStack{
@@ -78,7 +116,7 @@ struct UpcomingCard: View {
                 .shadow(radius: 5, x:0, y: 5)
             
             VStack(alignment: .leading){
-                Text("Mr. Hugh Janus")
+                Text("Mr. John Johnson")
                     .frame(width: 150, alignment: .leading)
                     .foregroundColor(.white)
                     .font(.title)
@@ -163,13 +201,13 @@ struct LaterThisDayCard: View {
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 80, height: 40)
+                            .frame(width: 100, height: 40)
                             .foregroundColor(.blue)
                         HStack(spacing: 2){
                             Image(systemName: "clock")
                                 .foregroundColor(.white)
                             
-                            Text("10 AM")
+                            Text("11:00 AM")
                                 .foregroundColor(.white)
                         }
                     }
@@ -185,17 +223,18 @@ struct UserDetails: View {
     var body: some View {
         HStack{
             Image(systemName: "person.circle.fill")
-                .font(.title)
+                .font(.largeTitle)
             
             
             VStack(alignment: .leading){
                 Text("Welcome,")
-                    .font(.caption)
+                    .font(.callout)
                 
-                Text("Dr. Barry Balls")
+                Text("Dr. Barry Allen")
                     .font(.title)
                     .fontWeight(.heavy)
                     .foregroundColor(.blue)
+                    .padding(.top,-20)
                 
             }
         }
